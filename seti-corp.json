@@ -1,0 +1,93 @@
+{
+    'uuid': 'f68733cb-ff17-4742-a357-cd95f7b9d5c3',
+    'properties': {
+        'company_type': 'for_profit',
+        'founded_on': {
+            'precision': 'day',
+            'value': '2018-06-15'
+        },
+        'facet_ids': ['rank', 'company'],
+        'identifier': {
+            'permalink': 'seti-corp',
+            'image_id': 'plycyuvud017hmkhu79u',
+            'uuid': 'f68733cb-ff17-4742-a357-cd95f7b9d5c3',
+            'entity_def_id': 'organization',
+            'value': 'Mirror, Mirror - Off the Wall Productions'
+        },
+        'ipo_status': 'private',
+        'founder_identifiers': [{
+            'permalink': 'john-l-coulson',
+            'image_id': 'ht9eadfzravssvvxzfxu',
+            'uuid': 'ec4cff0f-7de6-4f7f-a898-9964dfecdb70',
+            'entity_def_id': 'person',
+            'value': 'John L. Coulson'
+        }, {
+            'permalink': 'john-r-horsting',
+            'image_id': 'wfipygbd39wgh5eaiggd',
+            'uuid': '95719912-4640-46e9-94ce-130bbe407d6a',
+            'entity_def_id': 'person',
+            'value': 'John R. Horsting'
+        }, {
+            'permalink': 'serge-stein',
+            'image_id': 'zsqwijnphqkwrn7yc1te',
+            'uuid': 'c3d928da-8378-464e-8bc1-1b2e891bb38e',
+            'entity_def_id': 'person',
+            'value': 'Serge Stein'
+        }],
+        'categories': [{
+            'entity_def_id': 'category',
+            'permalink': 'advertising-6cb6',
+            'uuid': '6cb68537-2de1-b041-2ee5-451ff81bccab',
+            'value': 'Advertising'
+        }, {
+            'entity_def_id': 'category',
+            'permalink': 'esports',
+            'uuid': '7942caad-878e-65f5-4991-471dc8e7667d',
+            'value': 'eSports'
+        }, {
+            'entity_def_id': 'category',
+            'permalink': 'gambling',
+            'uuid': '80ccab3c-f397-2628-2bc6-bdcbde68eb89',
+            'value': 'Gambling'
+        }, {
+            'entity_def_id': 'category',
+            'permalink': 'gamification-af92',
+            'uuid': 'af922a55-ff56-771a-b9b5-06c1284ef0c8',
+            'value': 'Gamification'
+        }, {
+            'entity_def_id': 'category',
+            'permalink': 'media-and-entertainment',
+            'uuid': '78b58810-ad58-a623-2a80-2a0e3603a544',
+            'value': 'Media and Entertainment'
+        }, {
+            'entity_def_id': 'category',
+            'permalink': 'music',
+            'uuid': 'd922c006-3ba0-537a-edb5-379ca5767662',
+            'value': 'Music'
+        }, {
+            'entity_def_id': 'category',
+            'permalink': 'music-education',
+            'uuid': 'd4daa14a-4946-67f6-d0b9-0997bdb2b889',
+            'value': 'Music Education'
+        }, {
+            'entity_def_id': 'category',
+            'permalink': 'music-streaming',
+            'uuid': '19d6c5f4-0609-ebd6-970e-fee0e36d20a7',
+            'value': 'Music Streaming'
+        }, {
+            'entity_def_id': 'category',
+            'permalink': 'video',
+            'uuid': 'c6adf822-7fa3-c0b3-5188-556e08d72128',
+            'value': 'Video'
+        }, {
+            'entity_def_id': 'category',
+            'permalink': 'video-games',
+            'uuid': 'dabab6af-bf12-00ca-b185-85cead095097',
+            'value': 'Video Games'
+        }],
+        'created_at': '2019-01-01T03:36:35Z',
+        'twitter': {
+            'value': 'https://twitter.com/instantidol'
+        }
+    }
+}
