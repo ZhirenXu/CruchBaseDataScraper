@@ -1,5 +1,116 @@
 import json
 
+class Organization:
+    acquirer: dict
+    alias: list
+    category: list
+    categoryGroup: list
+    closedOn: dict
+    compantType: str
+    contactEmail: str
+    createdAt: str
+    delistedOn: dict
+    demoDays: bool
+    description: str
+    diversitySpotlights: list
+    entityDefID: str
+    equityFundingTotal: dict
+    exitedOn: dict
+    facebook: dict
+    facetIDs: list
+    foundedOn: dict
+    founderIDs: list
+    fundingStage: str
+    fundingTotal: dict
+    hubTags: list
+    imageID: str
+    imageUrl: str
+    investorIDs: list
+    investorStage: list
+    investorType: list
+    ipoStatus: str
+    lastEquityFundingTotal: dict
+    lastEquityFundingType: str
+    lastFundingAt: str
+    lastFundingTotal: dict
+    lastFundingType: str
+    lastKeyEmployeeChangeDate: str
+    layoutID: str
+    legalName: str
+    linkedin: dict
+    listedStockSymbol: str
+    locationGroupIDs: list
+    locationIDs: list
+    name: str
+    numAcquisitions: int
+    numAlumni: int
+    numArticles: int
+    numCurrentAdvisorPositions: int
+    numCurrentPositions: int
+    numDiversitySpotlightInvestments: int
+    numEmployeeEnum: str
+    numEnrollments: str
+    numEventAppearance: int
+    numExits: int
+    numExitsIPO: int
+    numFounderAlumni: int
+    numFounder: int
+    numFundingRound: int
+    numFunds: int
+    numInvestments: int
+    numInvestors: int
+    numLeadInvestments: int
+    numLeadInvestors: int
+    numPastPositions: int
+    numPortfolioOrg: int
+    numSubOrg: int
+    operatingStatus: str
+    overrideLayoutID: str
+    ownerID: dict
+    permalink: str
+    permaAliases: list
+    phoneNum: str
+    programApplicationDeadline: str
+    programDuring: int
+    programType: str
+    rankDelta30: float
+    rankDelta7: float
+    rankDelta90: float
+    rankOrg: int
+    rankPrincipal: int
+    revenueRange: str
+    schoolMethod: str
+    schoolProgram: str
+    schoolType: str
+    shortDescription: str
+    status: str
+    stockExchangeSymbol: str
+    stockSymbol: dict
+    twitter: dict
+    updateAt: str
+    uuid: str
+    valuation: dict
+    valuationDate: str
+    website: dict
+    websiteUrl: str
+    wentPublicOn: str
+    
+    def getAcquirer
+
+    class EntityIdentifier:
+        uuid: str
+        permalink: str
+        value: str
+        imageID: str
+        entityDefID: str
+
+        def __init__(self):
+            uuid = ""
+            permalink = ""
+            value = ""
+            imageID = ""
+            entityDefID = ""
+        
 # @return
 #       A single list contain all data, data is pure string
 def getData(json, header):
@@ -176,8 +287,11 @@ def getData(json, header):
         acqNum = getAcqNum(propertyDict["num_acquisitions"])
     else:
         acqNum = ["null"]
+    if propertyDict.has_key("num_alumni"):
+        AlumniNum = getAlumniNum(propertyDict["num_alumni"])
+    else:
+        AlumniNum = ["null"]
     
-        
     print(acquirerList, "\n", aliasList, "\n", categoryList)
 
 def getAlias(data):
