@@ -26,13 +26,17 @@ def main():
         print("API Authentication Fail!")
         print(response.json())
     json_response = response.json()
-    print("The length of JSON: ", len(json_response))
+    #print("The length of JSON: ", len(json_response))
     with open(outFile, 'w') as outFile:
         json.dump(json_response, outFile, indent=4)
     #print(requestBody["field_ids"])
     csvHeader = requestBody["field_ids"]
     print("Dump json success")
     outFile.close()
+    print("The josn file is in the same folder. Pree enter to exit.")
+    input()
+    sys.exit(0)
+    
     
             
 def getCSVOutput():
