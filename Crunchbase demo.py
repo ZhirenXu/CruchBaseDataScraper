@@ -20,13 +20,15 @@ def main():
     response = requests.post(url, json=requestBody)
     if response.status_code == 200:
         print("API Authentication Success.")
+        print("Please wait while the program building json data...")
     else:
         print("API Authentication Fail!")
+        print(response.json())
     json_response = response.json()
     print(json_response)
-    with open("data.json", 'w') as outFile:
+    with open("venture2.json", 'w') as outFile:
         json.dump(json_response, outFile)
-    print(requestBody["field_ids"])
+    #print(requestBody["field_ids"])
     csvHeader = requestBody["field_ids"]
     print("Dump json success")
     outFile.close()
@@ -62,7 +64,7 @@ def getValue(json):
 def getEntities(json):
     uuid = json["entities"]["uuid"]
     company_type = json["entities"]["company_type"]
-    permalink = json["entities"][
+    #permalink = json["entities"][
 
 if __name__ == "__main__":
     main()

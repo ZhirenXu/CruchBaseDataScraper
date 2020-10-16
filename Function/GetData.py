@@ -95,7 +95,8 @@ class Organization:
     websiteUrl: str
     wentPublicOn: str
     
-    def getAcquirer
+    def getAcquirer(self):
+        
 
     class EntityIdentifier:
         uuid: str

@@ -33,7 +33,6 @@ def getRequestBody():
         "last_funding_at",
         "last_funding_total",
         "last_funding_type",
-        #"last_key_employee_change_date",
         "layout_id",
         "legal_name",
         "linkedin",
@@ -102,18 +101,24 @@ def getRequestBody():
     "query": [
         {
             "type": "predicate",
+            "field_id": "categories",
+            "operator_id": "includes",
+            "values": ["venture-capital", "Software"]
+        },
+        {
+            "type": "predicate",
             "field_id": "facet_ids",
             "operator_id": "includes",
             "values": ["company"]
         },
         {
             "type": "predicate",
-            "field_id": "created_at",
+            "field_id": "founded_on",
             "operator_id": "gte",
-            "values": ["2020"]
+            "values": ["2018"]
         }
     ],
-    "limit": 10
+    "limit": 1000
     }
 
     return requestBody
