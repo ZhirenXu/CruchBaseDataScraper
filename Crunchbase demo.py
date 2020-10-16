@@ -15,7 +15,8 @@ def main():
     outFile = ""
     entityData = []
     totalData = []
-    
+
+    outFile = getCSVOutput()
     print(url)
     response = requests.post(url, json=requestBody)
     if response.status_code == 200:
@@ -25,9 +26,9 @@ def main():
         print("API Authentication Fail!")
         print(response.json())
     json_response = response.json()
-    print(json_response)
-    with open("venture2.json", 'w') as outFile:
-        json.dump(json_response, outFile)
+    print("The length of JSON: ", len(json_response))
+    with open(outFile, 'w') as outFile:
+        json.dump(json_response, outFile, indent=4)
     #print(requestBody["field_ids"])
     csvHeader = requestBody["field_ids"]
     print("Dump json success")
@@ -35,7 +36,7 @@ def main():
     
             
 def getCSVOutput():
-    print("Please enter output file name (with .csv): ")
+    print("Please enter output json file name (with .json): ")
     fileOut = input()
  
     return fileOut
