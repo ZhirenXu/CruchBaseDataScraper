@@ -2,11 +2,11 @@ import requests
 import sys
 import csv
 import json
-from Function import CrunchBaseRequest
+from Function import CrunchBaseRequest_strict
 
 def main():
-    url = CrunchBaseRequest.getRequestUrl()
-    requestBody = CrunchBaseRequest.getRequestBody()
+    url = CrunchBaseRequest_strict.getRequestUrl()
+    requestBody = CrunchBaseRequest_strict.getRequestBody()
     crediential = {}
     browser = ()
     i = 0
@@ -33,7 +33,7 @@ def main():
     csvHeader = requestBody["field_ids"]
     print("Dump json success")
     outFile.close()
-    print("The josn file is in the same folder. Pree enter to exit.")
+    print("The josn file is in the same folder. Press enter to exit.")
     input()
     sys.exit(0)
     

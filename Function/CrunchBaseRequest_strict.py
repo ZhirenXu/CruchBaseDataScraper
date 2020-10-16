@@ -102,8 +102,9 @@ def getRequestBody():
         {
             "type": "predicate",
             "field_id": "categories",
-            "operator_id": "includes_all",
-            "values": ["b37dbaeb-c825-e6a0-36de-84556a5d2e1f", "c08b5441-a05b-9777-b7a6-012728caddd9"]
+            "operator_id": "includes",
+            #enterprise software OR software
+            "values": ["d38b3f26-abc4-6f7b-b29d-b952021a1b14", "c08b5441-a05b-9777-b7a6-012728caddd9"]
         },
         {
             "type": "predicate",
@@ -115,7 +116,13 @@ def getRequestBody():
             "type": "predicate",
             "field_id": "founded_on",
             "operator_id": "gte",
-            "values": ["2018"]
+            "values": ["2015"]
+        },
+        {
+            "type": "predicate",
+            "field_id": "founded_on",
+            "operator_id": "lte",
+            "values": ["2019"]
         }
     ],
     "limit": 1000
