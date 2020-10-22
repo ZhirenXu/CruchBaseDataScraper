@@ -103,7 +103,7 @@ def getRequestBody():
             "type": "predicate",
             "field_id": "categories",
             "operator_id": "includes",
-            "values": ["venture-capital", "Software"]
+            "values": ["Software"]
         },
         {
             "type": "predicate",
@@ -115,10 +115,16 @@ def getRequestBody():
             "type": "predicate",
             "field_id": "founded_on",
             "operator_id": "gte",
-            "values": ["2018"]
+            "values": ["2015"]
+        },
+        {
+            "type": "predicate",
+            "field_id": "founded_on",
+            "operator_id": "lte",
+            "values": ["2019"]
         }
     ],
-    "limit": 1000
+    "limit": 10
     }
 
     return requestBody
