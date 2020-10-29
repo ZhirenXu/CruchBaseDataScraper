@@ -8,15 +8,14 @@ from Function import Run
 
 ##TODO: get into run and use the uuid to generate new request body
 def main():
-    outFile = Run.getJsonOutput()
-    jsonResponse = Run.process()
-    with open(outFile, 'w') as outFile:
+    Greeting.showInfo()
+    outFileName = Run.getJsonOutput()
+    jsonResponse = Run.process(outFileName)
+    with open(outFileName, 'a') as outFile:
+        print("Dumping JSON... The time is around 3-5 mins depend on file size.")
         json.dump(jsonResponse, outFile, indent=4)
     print("Dump json success.")
-    outFile.close()
-    numOfRecord = len(jsonResponse["entities"])
-    print("This request contains ", numOfRecord, "entities")
-    Greeting.sysExit(outFile)    
+    Greeting.sysExit(outFileName)    
 
 if __name__ == "__main__":
     main()

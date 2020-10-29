@@ -3,9 +3,9 @@ import sys
 ## print program info
 def showInfo():
     print("*******************************************")
-    print("*   Crunchbase JSON Data Scrapper v1.0.0  *")
+    print("*   Crunchbase JSON Data Scrapper v1.0.1  *")
     print("*           Author: Zhiren Xu             *")
-    print("*        published data: 10/22/20         *")
+    print("*        published data: 10/29/20         *")
     print("*******************************************")
 
 ## print exit message

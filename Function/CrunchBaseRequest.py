@@ -1,3 +1,4 @@
+import getpass
 def getRequestBody():
     requestBody ={
     "field_ids": [
@@ -124,12 +125,17 @@ def getRequestBody():
             "values": ["2019"]
         }
     ],
-    "limit": 10
+    "limit": 1000
     }
 
     return requestBody
 
 def getRequestUrl():
-    url = "https://api.crunchbase.com/api/v4/searches/organizations?user_key=d1be01f70bca47e9530407e05dca75a8"
+    print("Please enter your api access key. For privacy, the key you type/copy in is invisible: ")
+    password = getpass.getpass()
+    while len(password) == 0:
+        print("Empty password. Please type again. Ctrl+C to quit.")
+        password = getpass.getpass()
+    url = "https://api.crunchbase.com/api/v4/searches/organizations?user_key="+str(password)
 
     return url
