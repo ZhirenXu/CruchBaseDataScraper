@@ -126,3 +126,4 @@ dmypy.json
 *.xlsx
 crunchbase.zip
 *.json
+*.csv

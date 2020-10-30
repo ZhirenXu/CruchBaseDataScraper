@@ -14,7 +14,9 @@ def process(outFile):
     response = getResponse(url, requestBody)
     
     jsonResponse = response.json()
-
+    for element in jsonResponse["entities"]:
+        processProperty(element)
+        
     totalNumOfRecord = int(jsonResponse["count"])
     print("\nTotal number of available result: ", totalNumOfRecord)
     numOfRequested = len(jsonResponse["entities"])
@@ -22,12 +24,13 @@ def process(outFile):
     updateRequestBody(jsonResponse, numOfRequested, requestBody)
     
     while numOfMerged < totalNumOfRecord:
-        print("Already receive ", numOfMerged, " / ", totalNumOfRecord, "records...", end = "")
+        print("Already received ", numOfMerged, " / ", totalNumOfRecord, "records...", end = "")
         newResponse = requests.post(url, json=requestBody)
         newEntities = newResponse.json()["entities"]
         numOfRequested = len(newEntities)
         updateRequestBody(newResponse.json(), numOfRequested, requestBody)
         for entity in newEntities:
+            processProperty(entity)
             jsonResponse["entities"].append(entity)
         print("Merge into JSON complete.")
         numOfMerged += numOfRequested
@@ -35,6 +38,18 @@ def process(outFile):
     
     return jsonResponse
 
+def processProperty(entity):
+    try:
+        categories = entity["properties"]['categories']
+        industry = ""
+        for category in categories:
+            industry += category["value"]
+            industry += "|"
+        entity["properties"]["industry"] = industry
+    except:
+        print("Unable to isolate industry!")
+    
+    
 def updateRequestBody(jsonResponse, numOfRequested, requestBody):
     uuid = getLastUuid(jsonResponse, numOfRequested)
     requestBody['after_id'] = uuid
